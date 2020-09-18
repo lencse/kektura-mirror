@@ -18,7 +18,9 @@
     <table>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous"></script>
         <script>
-            for (var d = new Date(2020, 8, 17); d < new Date(); d.setDate(d.getDate() + 1)) {
+            const yesterday = new Date()
+            yesterday.setDate(yesterday.getDate() - 1)
+            for (const d = new Date(2020, 8, 17); d < yesterday; d.setDate(d.getDate() + 1)) {
                 const path = moment(d).format('YYYY-MM-DD')
                 document.write(`
                     <tr>
