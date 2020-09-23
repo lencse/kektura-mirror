@@ -20,7 +20,7 @@
         <script>
             const yesterday = new Date()
             yesterday.setDate(yesterday.getDate() - 1)
-            for (const d = new Date(2020, 8, 17); d < yesterday; d.setDate(d.getDate() + 1)) {
+            for (const d = new Date(2020, 8, 19); d < yesterday; d.setDate(d.getDate() + 1)) {
                 const path = moment(d).format('YYYY-MM-DD')
                 document.write(`
                     <tr>
